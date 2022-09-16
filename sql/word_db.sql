@@ -25,3 +25,5 @@ create table `items` (
     foreign key(`book_id`) references `book`(`id`),
     primary key(`id`)
 );
+
+insert into user(`name`,`password`) values('测试用户','123456');
