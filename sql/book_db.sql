@@ -18,7 +18,7 @@ create table `book` (
     primary key(`id`)
 );
 
-create table `items` (
+create table `item` (
     `id` bigint unsigned not null auto_increment,
     `book_id` bigint unsigned not null,
     `key` varchar(255) not null,
@@ -29,3 +29,4 @@ create table `items` (
 
 insert into `user`(`name`,`password`) values('测试用户','123456');
 insert into `book`(`user_id`,`name`) values(1,'测试单词本');
+insert into `item`(`book_id`,`key`,`value`) values(1,'invoke','调用');
