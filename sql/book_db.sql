@@ -1,6 +1,6 @@
-drop database if exists `word_db`;
-create database if not exists `word_db`;
-use `word_db`;
+drop database if exists `book_db`;
+create database if not exists `book_db`;
+use `book_db`;
 
 create table `user` (
     `id` bigint unsigned not null auto_increment,
@@ -21,7 +21,8 @@ create table `book` (
 create table `items` (
     `id` bigint unsigned not null auto_increment,
     `book_id` bigint unsigned not null,
-    `content` varchar(255) not null,
+    `key` varchar(255) not null,
+    `value` varchar(255) not null,
     foreign key(`book_id`) references `book`(`id`),
     primary key(`id`)
 );
